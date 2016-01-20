@@ -22,6 +22,11 @@ ___
 - git clone https://github.com/jashkenas/underscore.git my_directory \\ clone a repository from a remote location, my_directory is option but will save the directory as that name
 - git remote add origin git@github.com:myname/my_project.gitv \\ set remote origin for repository
 - git remote -v \\ list all remotes for repository
+- git statues -s \\ view all files in staging, commited or not in either but altered/new, -s condenses the output
+- git add \\ this is similar to commit but it adds the file to the staging area
+- get reset HEAD \\ remove a file from staging
+- get rev-parse HEAD \\ view the hash of previous commit
+- git log \\ view the commit history in full detail 
 
 
 ####Notes  
