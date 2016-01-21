@@ -116,5 +116,24 @@ ___
     - git checkout master
     - git merge upstream/master
       - this will list out what changes took place with the local repository
+  - Syncing local copy
+    - git add -A to commit everything in folders
+    - git commit -m "Commit Message Goes Here"
+    - git push to push to GitHub servers
   - Push changes to remote server
     - git push origin master sets git push to remote name and branch name
+- **Execution Notes**
+  - At this point I have setup basig Git information, setup SSH Keys, close repository and synced with fork.
+  - Now I am going to copy the Scripts and Backup directories from my commandline-practice directory to the local version of my GitHub directory all within Terminal.
+  1. /coursework-jhayslett - git status to confirm everything is identical
+  2. cd Course-02-Command-Line-for-Web-Developers-and-Mastering-Git-and-Github/
+  3. cd Section-01-Command-Line-for-Developers/
+  4. mkdir scripts
+  5. cd ../
+  6. mkdir backups
+  7. mv ~/commainline-practice/backups/* ~/moderndeveloper-git/coursework-jhayslett/Course-02-Command-Line-for-Web-Developers-and-Mastering-Git-and-Github/Section-01-Command-Line-for-Developers/backups/
+  8. cd coursework-jhayslett/
+  9. git add -A
+  10. git commit -M "Script and Backup Files Added"
+  11. git push
+- Everything went suprisingly well and I confirmed through GitHub that all the files transferred over correctly.
