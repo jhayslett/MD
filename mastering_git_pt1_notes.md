@@ -80,3 +80,41 @@ ___
 - Use git rev-parse HEAD to echo the hash string for the last commit
 - Use git log to review the log of commits
 - **Exercise Notes** -
+  - git init - touch README.md && git add -A && git commit -m "Second Commit"
+  - touch .gitignore - pico ".gitignore" (makes it easier to add new lines for each item I want to ignore)
+    - to include a file that matches an existing exclude pattern put the file name, before extension
+- **Assignment Notes**
+  - Fork Repo Process - This process started with setting up my machine to GitHub. This is a one time process, now I can fork away.
+    - Setup basic Git information - name & email address 
+      - git config --global user.name "YOUR NAME"
+      - git config --global user.email "YOUR EMAIL ADDRESS"
+    - Setup security for connect
+      - I decided to go with SSH on accident, I did not see that HTTP URL is recommended.
+      - ls -al ~/.ssh - to see existing SSH Keys on the system
+        - If an SSH Key exist most forward two same level steps
+        - If an SSH Key does not exist then create a new one by
+          - ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+          - enter passphrase (have a very long one generated for you)
+        - eval "$(ssh-agent -s)" to ensure SSH Agent is enabled
+        - ssh-add ~/.ssh/id_rsa to add the SSH Key to the SSH Agent
+        - pbcopy < ~/.ssh/id_rsa.pub to send the SSH Key to your paste board
+        - Navigated through GitHub interface to setup new SSH Key
+        - Tested the connection by inserting
+        - ssh -T git@github.com to attempt to pass SSH to GitHub
+        - After typing yes, if the success message so your correct username, you setup correctly.
+  - Clone repository 
+    -  Fork the repository within the GitHub interface.
+    -  Create a local clone of your fork
+    -  Copy your fork from the repository interface
+    -  git clone https://github.com/jhayslett/Spoon-Knife to clone repository to my pwd
+  -  Sync repository with local clone
+    - Navigate to where your local repository is located and git remote -v to list all remotes for repository
+    - git remote add upstream https://github.com/"where_you_want_to_sync_back_to".git
+    - git remote -v to verify connection was made
+  - Syncing a fork
+    - git fetch upstream, commits to master will be stored in a local brand, upstream/master
+    - git checkout master
+    - git merge upstream/master
+      - this will list out what changes took place with the local repository
+  - Push changes to remote server
+    - git push origin master sets git push to remote name and branch name
