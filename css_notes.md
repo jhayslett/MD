@@ -30,10 +30,10 @@ ___
 1 - Absolute position  
 ```css```
 .container { // The parent element that it will be based off of needs to be positioned  
-    position: absolute;  
-    top: 50%;  
-    left: 50%;                                     // this is to make up for half the  
-    transform: translateX(-50%) translateY(-50%);  // height and width of the element 
+  position: absolute;  
+  top: 50%;  
+  left: 50%;                                     // this is to make up for half the  
+  transform: translateX(-50%) translateY(-50%);  // height and width of the element 
 }                                                  // from the 50% top and left  
 ```  
 
@@ -43,12 +43,12 @@ This method seems simple and straightforward.
 
 ```css```
 html, body, .container {  
-    height: 100%;  
+  height: 100%;  
 }  
 .container {  
-    display: flex;  
-    align-items: center;  
-    justify-content: center;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
 }  
 ```
 **Horizontal Center**  
@@ -57,3 +57,15 @@ html, body, .container {
   margin: auto;
 }  
 ```  
+
+
+**How do I cut off strings so they don't wrap to a new line?**
+
+```css```
+.container {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+```
+
